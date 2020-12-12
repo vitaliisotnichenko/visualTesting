@@ -1,0 +1,27 @@
+{
+    "name": "codeceptjs-tests",
+    "version": "0.1.0",
+    "private": true,
+    "scripts": {
+        "codeceptjs": "tests/node_modules/.bin/codeceptjs run --steps",
+        "codeceptjs:headless": "HEADLESS=true codeceptjs run --steps",
+        "codeceptjs:ui": "tests/node_modules/.bin/codecept-ui --app",
+        "codeceptjs:demo": "tests/node_modules/.bin/codeceptjs run --steps -c node_modules/@codeceptjs/examples",
+        "codeceptjs:demo:headless": "HEADLESS=true codeceptjs run --steps -c tests/node_modules/@codeceptjs/examples",
+        "codeceptjs:demo:ui": "tests/node_modules/.bin/codecept-ui --app  -c node_modules/@codeceptjs/examples"
+    },
+    "devDependencies": {
+        "@codeceptjs/configure": "^0.6.2",
+        "@codeceptjs/examples": "^1.2.1",
+        "@codeceptjs/ui": "^0.4.2",
+        "codeceptjs": "^3.0.2",
+        "playwright": "^1.6.2",
+        "dotenv": "^8.2.0",
+        "allure-commandline": "^2.13.0"
+    },
+    "dependencies": {
+        "codeceptjs-applitoolshelper": "^1.1.5",
+        "codeceptjs-resemblehelper": "^1.9.3",
+        "webdriverio": "^6.10.7"
+    }
+}
