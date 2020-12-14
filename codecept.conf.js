@@ -4,21 +4,21 @@ exports.config = {
   tests: './*_test.js',
   output: './output',
   helpers: {
-    Playwright: {
-      url: 'http://192.168.178.132:8080/index2.html',
-      // port: 63342,
-      show: true,
-      browser: 'chromium'
-    },
+    // Playwright: {
+    //   url: 'http://192.168.178.132:8080/index2.html',
+    //   // port: 63342,
+    //   show: true,
+    //   browser: 'chromium'
+    // },
     WebDriver: {
-      url: 'https://applitools.com/helloworld',
+      url: 'http://192.168.178.132:8080/index2.html',
       browser: 'chrome',
-      desiredCapabilities: {
-        chromeOptions: {
-          args: [ '--headless', '--disable-extensions', '--disable-gpu', '--no-sandbox', '--disable-dev-shm-usage']
-        }
-      },
-      windowSize: '1920x600',
+      restart: true,
+      host: 'localhost',
+      port: 4444,
+      protocol: 'http',
+      windowSize: '1600x1080',
+      outputDir: './output',
       smartWait: 5000,
       timeouts: {
         'script': 60000,
@@ -34,7 +34,7 @@ exports.config = {
 
     ApplitoolsHelper: {
       require: 'codeceptjs-applitoolshelper',
-      applitoolsKey: 'YOUR_API_KEY'
+      applitoolsKey: 'ZA0y20TMtiFMKiVFivjZfUW6UrjxQtAPYE101nPIDYf9s110'
     }
   },
   include: {
@@ -58,6 +58,12 @@ exports.config = {
       enabled: true,
       outputDir: './output',
       enableScreenshotDiffPlugin: true
+    },
+    selenoid: {
+      enabled: true,
+      deletePassed: false,
+      autoCreate: false,
+      enableVNC: true
     }
   }
 }
