@@ -20,6 +20,7 @@
         "allure-commandline": "^2.13.0"
     },
     "dependencies": {
+        "@visual-regression-tracker/agent-codeceptjs": "^4.6.1",
         "codeceptjs-applitoolshelper": "^1.1.5",
         "codeceptjs-resemblehelper": "^1.9.3",
         "webdriverio": "^6.10.7"

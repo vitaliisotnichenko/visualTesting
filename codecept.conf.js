@@ -35,7 +35,17 @@ exports.config = {
     ApplitoolsHelper: {
       require: 'codeceptjs-applitoolshelper',
       applitoolsKey: 'ZA0y20TMtiFMKiVFivjZfUW6UrjxQtAPYE101nPIDYf9s110'
-    }
+    },
+
+    VisualRegressionTrackerHelper: {
+      require: "@visual-regression-tracker/agent-codeceptjs",
+      apiUrl: "http://localhost:4200",
+      apiKey: "BQTZV7FSW2M7FMQKXRB220BSTDSD",
+      project: "ebc5bbf2-3616-4a7b-835c-a60452c4bbcc",
+      branchName: "master",
+      ciBuildId: "commit_sha",
+      enableSoftAssert: false
+    },
   },
   include: {
     I: './steps_file.js'
