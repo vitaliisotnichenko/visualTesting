@@ -1,6 +1,6 @@
 const { I } = inject();
 
-Feature("Visual regression tracker");
+Feature("Visual regression track");
 
 BeforeSuite(() => {
     I.vrtStart();
